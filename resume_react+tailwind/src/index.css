@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Brand colors */
+  --color-primary: #0a0a0a;
+  --color-primary-fg: #fafafa;
+  --color-app-bg: #f6f6f8;
+  --color-dark-bg: #171717;
+
+  /* Text colors */
+  --color-text-2ry: #4f4f4f;
+  --color-text-muted: #707070;
+  --color-text-soft: #737373;
+  --color-text-lighter: #94a3b8;
+
+  /* Border colors */
+  --color-border-default: #e2e8f0;
+  --color-border-light: #e5e5e5;
+}
+@layer base {
+  /* ========== Base Overrides ========== */
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul,
+  ol {
+    list-style: none;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  button {
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  input,
+  textarea {
+    font-family: inherit;
+    outline: none;
+  }
+}
