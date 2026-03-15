@@ -7,6 +7,7 @@ import DashboardEmpty from "@/pages/DashboardEmpty";
 import DashboardArchive from "@/pages/DashboardArchive";
 import AnalysisPage from "@/pages/AnalysisPage";
 import DashboardLoading from "@/pages/DashboardLoading";
+import SettingsPage from "@/pages/SettingsPage";
 
 export function AppRoutes() {
   return (
@@ -20,6 +21,7 @@ export function AppRoutes() {
           <Route path="archive" element={<DashboardArchive />} />
           <Route path="analyze" element={<AnalysisPage />} />
           <Route path="analyze/loading" element={<DashboardLoading />} />
+          <Route path="settings" element={<SettingsPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
