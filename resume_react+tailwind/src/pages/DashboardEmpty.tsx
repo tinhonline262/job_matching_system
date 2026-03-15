@@ -15,9 +15,9 @@ export default function DashboardEmpty() {
           <div className="w-full h-full rounded-full bg-[radial-gradient(circle,rgba(200,200,200,0.15)_0%,transparent_70%)] flex items-center justify-center">
             <div className="w-40 h-40 bg-white rounded-[24px] shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.1),0px_8px_10px_-6px_rgba(0,0,0,0.1)] flex flex-col items-center justify-center gap-2 p-[25px] relative">
               <span className="block w-full h-[5px] bg-[#e5e5e5] rounded-[3px]" />
-              <span className="block w-4/5 h-[5px] bg-[#e5e5e5] rounded-[3px]" />
+              <span className="block w-[80%] h-[5px] bg-[#e5e5e5] rounded-[3px]" />
               <span className="block w-full h-[5px] bg-[#e5e5e5] rounded-[3px]" />
-              <span className="block w-4/5 h-[5px] bg-[#e5e5e5] rounded-[3px]" />
+              <span className="block w-[80%] h-[5px] bg-[#e5e5e5] rounded-[3px]" />
               <span className="mt-2 text-text-lighter">
                 <svg
                   className="w-8 h-10"
@@ -103,8 +103,8 @@ export default function DashboardEmpty() {
 
         {/* Description */}
         <p className="text-base font-normal leading-6 text-text-2ry max-w-[404px] mb-10">
-          Upload a resume and job description to generate your first AI-powered
-          analysis.
+          Upload your resume to begin an AI-powered analysis of your
+          professional profile and market alignment.
         </p>
 
         {/* Actions */}
@@ -114,34 +114,64 @@ export default function DashboardEmpty() {
             className="inline-flex items-center justify-center gap-2 h-14 px-8 bg-primary text-white text-base font-medium rounded-2xl shadow-[0px_10px_15px_-3px_rgba(10,10,10,0.25),0px_4px_6px_-4px_rgba(43,108,238,0.2)] hover:opacity-90 transition-opacity leading-6 no-underline w-full md:w-auto"
           >
             <svg
-              className="w-[22px] h-4"
-              viewBox="0 0 22 16"
+              className="w-5 h-5"
+              viewBox="0 0 20 20"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M11 0L0 6l11 6 11-6-11-6zM0 10l11 6 11-6"
+                d="M10 14V3m0 0L6 7m4-4l4 4"
                 stroke="currentColor"
-                strokeWidth="2"
-                strokeLinejoin="round"
+                strokeWidth="1.5"
                 strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M17 14v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
-            Upload Records
+            Upload Resume
           </Link>
           <Link
             to="/dashboard"
             className="inline-flex items-center justify-center h-14 px-8 bg-white text-primary text-sm font-medium rounded-2xl border border-[#e2e8f0] hover:bg-[#f8f8f8] transition-colors leading-5 no-underline w-full md:w-auto"
           >
-            View Analytics
+            View Samples
           </Link>
         </div>
 
-        {/* Meta info */}
+        {/* Feature descriptions */}
         <div className="flex gap-6 flex-wrap justify-center">
           <span className="flex items-center gap-2 text-xs font-normal text-text-soft leading-4">
             <svg
-              className="w-3 h-3 text-text-soft"
+              className="w-3 h-3 text-text-soft shrink-0"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 1L7.5 3.5L10.5 4L8.5 6L9 9L6 7.5L3 9L3.5 6L1.5 4L4.5 3.5L6 1z"
+                stroke="currentColor"
+                strokeWidth="1.2"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M4 6l2 2 4-4"
+                stroke="currentColor"
+                strokeWidth="1.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            Privacy Guaranteed
+          </span>
+          <span className="flex items-center gap-2 text-xs font-normal text-text-soft leading-4">
+            <svg
+              className="w-3 h-3 text-text-soft shrink-0"
               viewBox="0 0 12 12"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -160,54 +190,24 @@ export default function DashboardEmpty() {
                 strokeLinecap="round"
               />
             </svg>
-            0 files analyzed
+            Results in seconds
           </span>
           <span className="flex items-center gap-2 text-xs font-normal text-text-soft leading-4">
             <svg
-              className="w-3 h-3 text-text-soft"
+              className="w-3 h-3 text-text-soft shrink-0"
               viewBox="0 0 12 12"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M1 6a5 5 0 1010 0A5 5 0 001 6z"
+                d="M7 1H3a1 1 0 00-1 1v8a1 1 0 001 1h6a1 1 0 001-1V4L7 1z"
                 stroke="currentColor"
-                strokeWidth="1.5"
-              />
-              <path
-                d="M4.5 6l1.5 1.5L8 5"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
+                strokeWidth="1.2"
                 strokeLinejoin="round"
               />
+              <path d="M7 1v3h4" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
             </svg>
-            0 results viewed
-          </span>
-          <span className="flex items-center gap-2 text-xs font-normal text-text-soft leading-4">
-            <svg
-              className="w-3 h-3 text-text-soft"
-              viewBox="0 0 12 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                x="1"
-                y="1"
-                width="10"
-                height="10"
-                rx="2"
-                stroke="currentColor"
-                strokeWidth="1.5"
-              />
-              <path
-                d="M4 4h4M4 6h4M4 8h2"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              />
-            </svg>
-            0 reports generated
+            PDF, DOCX supported
           </span>
         </div>
       </motion.div>
