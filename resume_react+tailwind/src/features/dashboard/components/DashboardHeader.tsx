@@ -1,21 +1,28 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import UserDropdown from "./UserDropdown";
 
 export default function DashboardHeader() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    navigate("/login");
+  };
+
   return (
-    <header className="h-[73px] bg-white border-b border-[#e2e8f0] flex items-center justify-between px-4 md:px-10">
+    <header className="h-[73px] bg-white border-b border-[#dfe4eb] flex items-center justify-between px-4 md:px-8">
       <Link
         to="/dashboard"
         className="flex items-center gap-[10px] no-underline"
       >
-        <div className="w-8 h-8 bg-primary rounded-2xl flex items-center justify-center">
+        <div className="w-8 h-8 bg-[#0c0d10] rounded-full flex items-center justify-center">
           <svg
-            className="w-[18px] h-[18px] text-white"
-            viewBox="0 0 18 18"
+            className="w-[15px] h-[15px] text-white"
+            viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M9 1.5L11.25 6.75L16.5 9L11.25 11.25L9 16.5L6.75 11.25L1.5 9L6.75 6.75L9 1.5Z"
+              d="M12 2L14.2 7.8L20 10L14.2 12.2L12 18L9.8 12.2L4 10L9.8 7.8L12 2Z"
               fill="currentColor"
             />
           </svg>
@@ -27,6 +34,7 @@ export default function DashboardHeader() {
 
       <div className="flex items-center gap-4">
         <button
+          type="button"
           className="text-text-muted flex items-center justify-center"
           aria-label="Notifications"
         >
@@ -42,9 +50,12 @@ export default function DashboardHeader() {
             />
           </svg>
         </button>
-        <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">
-          AL
-        </div>
+
+        <UserDropdown
+          name="Cong Nguyen"
+          email="cong.nguyen@example.com"
+          onLogout={handleLogout}
+        />
       </div>
     </header>
   );
