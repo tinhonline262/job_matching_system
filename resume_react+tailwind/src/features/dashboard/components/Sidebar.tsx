@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const navItems = [
   {
-    label: "My Reports",
+    label: "Dashboard",
     path: "/dashboard",
     icon: (
       <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,7 +15,7 @@ const navItems = [
     ),
   },
   {
-    label: "Analyze Folder",
+    label: "My Resumes",
     path: "/dashboard/analyze",
     icon: (
       <svg viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,8 +25,8 @@ const navItems = [
     ),
   },
   {
-    label: "Resume Archive",
-    path: "/dashboard/archive",
+    label: "Analysis History",
+    path: "/dashboard/history",
     icon: (
       <svg viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1 3H17V13H1V3Z" stroke="currentColor" strokeWidth="1.2" />
@@ -61,26 +61,32 @@ export default function Sidebar() {
   const location = useLocation();
 
   return (
-    <aside className="hidden lg:flex w-64 min-h-full bg-white border-r border-[#e2e8f0] flex-col justify-between p-4">
-      <nav className="flex flex-col gap-2">
+    <aside className="hidden lg:flex w-64 min-h-full bg-white border-r border-[#dfe4eb] flex-col justify-between p-4">
+      <nav className="flex flex-col gap-1">
         {navItems.map((item) => (
           <Link
             key={item.path}
             to={item.path}
-            className={`flex items-center gap-3 p-3 rounded-lg text-sm text-primary no-underline leading-5 transition-colors ${
+            className={`flex items-center gap-3 p-3 rounded-xl text-sm text-primary no-underline leading-5 transition-colors ${
               location.pathname === item.path
-                ? "bg-app-bg font-medium shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]"
+                ? "bg-[#111111] text-white font-medium shadow-[0px_12px_20px_rgba(0,0,0,0.22)]"
                 : "font-normal hover:bg-[#f5f5f5]"
             }`}
           >
-            <span className="w-4 h-4 shrink-0 text-primary">{item.icon}</span>
+            <span
+              className={`w-4 h-4 shrink-0 ${
+                location.pathname === item.path ? "text-white" : "text-primary"
+              }`}
+            >
+              {item.icon}
+            </span>
             {item.label}
           </Link>
         ))}
       </nav>
 
-      <div className="p-[17px] border border-[#e2e8f0] rounded-lg">
-        <p className="text-xs font-normal text-primary leading-4 mb-2">
+      <div className="p-[14px] border border-[#d7dce5] rounded-[20px]">
+        <p className="text-xs uppercase font-semibold text-primary leading-4 mb-2 tracking-[0.02em]">
           Current Token Usage
         </p>
         <div className="w-full h-[6px] bg-[#e2e8f0] rounded-[3px] overflow-hidden mb-2">

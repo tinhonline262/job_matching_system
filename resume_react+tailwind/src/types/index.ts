@@ -24,3 +24,15 @@ export interface AnalysisResult {
   skillGaps: string[];
   feedback: string[];
 }
+
+export interface ProfileFormValues {
+  fullName: string;
+  email: string;
+  phone: string;
+  jobTitle: string;
+  location: string;
+  bio: string;
+  linkedin: string;
+  github: string;
+  website: string;
+}
