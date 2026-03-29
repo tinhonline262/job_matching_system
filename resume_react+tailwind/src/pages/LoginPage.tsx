@@ -13,8 +13,8 @@ export default function LoginPage() {
   return (
     <div className="flex min-h-screen bg-white">
       {/* Left / Testimonial Panel */}
-      <div className="hidden lg:flex flex-1 bg-app-bg flex-col justify-between p-16">
-        <div className="flex items-center gap-2">
+      <div className="hidden lg:flex flex-1 bg-app-bg relative p-16">
+        <div className="flex items-center gap-2 absolute top-16 left-16">
           <span className="w-8 h-8 bg-primary text-white rounded-lg flex items-center justify-center">
             <svg
               className="w-4 h-4"
@@ -32,11 +32,15 @@ export default function LoginPage() {
             Resume Intelligence
           </span>
         </div>
-        <blockquote className="max-w-[580px] text-lg font-normal leading-7 text-primary italic">
-          &ldquo;The AI feedback showed me exactly what recruiters were looking
-          for. I improved my resume in one evening and started getting interview
-          calls the same week.&rdquo; &mdash; Minh Tran, Backend Developer
-        </blockquote>
+
+        <div className="w-full h-full flex items-center">
+          <blockquote className="max-w-[580px] text-lg font-normal leading-7 text-primary italic">
+            &ldquo;The AI feedback showed me exactly what recruiters were looking
+            for. I improved my resume in one evening and started getting
+            interview calls the same week.&rdquo; &mdash; Minh Tran, Backend
+            Developer
+          </blockquote>
+        </div>
       </div>
 
       {/* Right / Form Panel */}

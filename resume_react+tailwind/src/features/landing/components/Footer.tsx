@@ -5,15 +5,15 @@ export default function Footer() {
     <footer className="bg-white border-t border-[#e2e8f0] px-5 md:px-40 pt-[35px] pb-12">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 text-center md:text-left">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-6 h-6 bg-primary rounded-lg flex items-center justify-center">
+          <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
             <svg
-              className="w-[11px] h-[11px] text-white"
-              viewBox="0 0 11 11"
+              className="w-[10px] h-[10px] text-white"
+              viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M5.5 0.5L7 4L10.5 5.5L7 7L5.5 10.5L4 7L0.5 5.5L4 4L5.5 0.5Z"
+                d="M12 2L14.2 7.8L20 10L14.2 12.2L12 18L9.8 12.2L4 10L9.8 7.8L12 2Z"
                 fill="currentColor"
               />
             </svg>
